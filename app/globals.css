@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { margin: 0; background: #080e17; color: #f7f9fc; font-family: var(--font-manrope), sans-serif; }
+.font-mono { font-family: var(--font-dm-mono), monospace; }
+::selection { background: #8ab4f8; color: #07101a; }
+
+/* The four segments are an original event motif using Google's brand palette, not an official GDG logo. */
+.brand-mark { position: relative; display: inline-grid; grid-template-columns: repeat(2, 12px); grid-template-rows: repeat(2, 12px); gap: 3px; flex: none; transform: rotate(-12deg); }
+.brand-mark span { display: block; border-radius: 5px; }
+.brand-blue { background: #4285f4; border-radius: 6px 3px 6px 3px !important; }
+.brand-red { background: #ea4335; border-radius: 3px 6px 3px 6px !important; }
+.brand-yellow { background: #fbbc04; border-radius: 3px 6px 3px 6px !important; }
+.brand-green { background: #34a853; border-radius: 6px 3px 6px 3px !important; }
+
+.hero-image { opacity: .83; }
+.hero-shade { background: linear-gradient(90deg, #080e17 0%, rgba(8,14,23,.96) 22%, rgba(8,14,23,.72) 48%, rgba(8,14,23,.25) 100%), linear-gradient(0deg, rgba(8,14,23,.78), transparent 35%, rgba(8,14,23,.2)); }
+.hero-color { background: linear-gradient(130deg, transparent 45%, rgba(66,133,244,.12) 78%, rgba(52,168,83,.07)); }
+.section-ambient { background: radial-gradient(ellipse at 2% 35%, rgba(66,133,244,.075), transparent 45%), radial-gradient(ellipse at 100% 90%, rgba(52,168,83,.055), transparent 35%); }
+.register-ambient { background: linear-gradient(115deg, rgba(8,15,25,.94), rgba(8,15,25,.80)), url('/images/hero-conference.jpg') center 57% / cover no-repeat; }
+.nav-glass, .nav-register { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); box-shadow: inset 0 1px 0 rgba(255,255,255,.14); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+.nav-register { background: rgba(255,255,255,.13); }
+
+/* A readable CSS glass layer remains visible if the optional refraction package is loading or unsupported. */
+.liquid-backdrop { position: absolute; inset: 0; pointer-events: none; background: rgba(255,255,255,.035); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+.liquid-backdrop-inner { width: 100%; height: 100%; }
+.liquid-backdrop-inner > .glass { display: flex !important; width: 100%; height: 100%; background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.08); box-shadow: inset 0 1px 0 rgba(255,255,255,.1) !important; }
+.liquid-action-wrap { position: relative; display: inline-flex; isolation: isolate; max-width: 100%; overflow: hidden; border: 1px solid rgba(255,255,255,.24); border-radius: 999px; background: rgba(255,255,255,.14); box-shadow: inset 0 1px 0 rgba(255,255,255,.22); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); transition: background 250ms ease-out, opacity 250ms ease-out, transform 250ms ease-out; }
+.liquid-action-wrap:hover { background: rgba(255,255,255,.21); }
+.liquid-action-wrap:active { transform: scale(.98); }
+.liquid-action-wrap.is-disabled { opacity: .65; cursor: not-allowed; }
+.liquid-action-wrap:focus-within { outline: 2px solid #8ab4f8; outline-offset: 4px; }
+.liquid-action-visual { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.liquid-action { width: 100%; height: 100%; }
+.liquid-action > .glass { display: flex !important; width: 100%; height: 100%; background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.12); box-shadow: inset 0 1px 0 rgba(255,255,255,.16) !important; }
+.glass-action-content { position: relative; z-index: 1; display: inline-flex; width: 100%; min-height: 55px; align-items: center; justify-content: center; gap: 24px; padding: 14px 26px; border: 0; background: transparent; color: #fff; font-family: var(--font-manrope), sans-serif; font-size: 13px; font-weight: 800; text-align: center; white-space: nowrap; cursor: pointer; }
+.glass-action-content:disabled { cursor: not-allowed; }
+.glass-action-content:focus-visible { outline: 0; }
+
+.registration-panel { backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); }
+.registration-panel .liquid-backdrop { background: rgba(255,255,255,.015); }
+.registration-panel .liquid-backdrop-inner > .glass { background: rgba(255,255,255,.02); }
+.field-group { display: flex; flex-direction: column; gap: 9px; }
+.field-group label { color: #f7f9fc; font-size: 12px; font-weight: 700; }
+.field-group label span { color: #a7d3ff; }
+.field-group input, .field-group select { width: 100%; min-height: 52px; border: 1px solid rgba(255,255,255,.2); border-radius: 11px; background: rgba(7,16,28,.8); padding: 13px 17px; color: #fff; font-family: var(--font-manrope), sans-serif; font-size: 13px; font-weight: 600; outline: none; box-shadow: inset 0 1px 0 rgba(255,255,255,.06); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: border-color 250ms ease-out, background 250ms ease-out; }
+.field-group input::placeholder, .field-group select.is-placeholder { color: #aebdd0; opacity: 1; }
+.field-group select { appearance: none; cursor: pointer; padding-right: 45px; }
+.field-group select option { background: #111d2e; color: #fff; }
+.field-group input:hover, .field-group select:hover { background: rgba(14,27,44,.92); }
+.field-group input:focus-visible, .field-group select:focus-visible { border-color: #8ab4f8; outline: 2px solid #8ab4f8; outline-offset: 2px; }
+.field-group input[aria-invalid="true"], .field-group select[aria-invalid="true"] { border-color: #f28b82; }
+.field-group input:disabled, .field-group select:disabled { opacity: .72; cursor: not-allowed; }
+.field-error { color: #ffd0cc; font-size: 12px; font-weight: 700; line-height: 1.5; }
+/* Kept out of the accessibility tree and off the tab order; humans never see it. */
+.honeypot { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+#consent:focus-visible { outline: 2px solid #8ab4f8; outline-offset: 3px; }
+#consent[aria-invalid="true"] { outline: 2px solid #f28b82; outline-offset: 3px; }
+.loading-marks { letter-spacing: 2px; animation: pulse-opacity 1s ease-in-out infinite alternate; }
+@keyframes pulse-opacity { to { opacity: .4; } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy { animation: rise-in .8s cubic-bezier(.16,1,.3,1) both; }
+  .hero-date-card { animation: rise-in .9s .16s cubic-bezier(.16,1,.3,1) both; }
+  @keyframes rise-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .nav-glass, .nav-register, .liquid-action-wrap, .hero-date-card, .registration-panel { backdrop-filter: none; -webkit-backdrop-filter: none; background: #192638; }
+  .liquid-backdrop, .liquid-action-visual { display: none; }
+  .field-group input, .field-group select { backdrop-filter: none; -webkit-backdrop-filter: none; background: #0c192a; }
+}
+@media (max-width: 767px) {
+  .hero-shade { background: linear-gradient(90deg, rgba(8,14,23,.97), rgba(8,14,23,.55)), linear-gradient(0deg, #080e17 0%, transparent 48%); }
+  .hero-image { object-position: 64% center; }
+}
