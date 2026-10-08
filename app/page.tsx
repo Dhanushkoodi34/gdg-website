@@ -42,7 +42,7 @@ export default function Home() {
           <div className="max-w-[850px] hero-copy">
             <div className="mb-7 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.21em] text-white/80 sm:text-[11px]">
               <span className="h-px w-7 bg-[#8ab4f8]" aria-hidden="true" />
-              Developer Day 2026 · Bengaluru
+              Developer Day 2026 · Coimbatore
             </div>
             <h1 className="max-w-[850px] text-[clamp(3.55rem,8vw,7.5rem)] font-extrabold leading-[0.99] tracking-[-0.075em] text-white">Build what&apos;s<br />next<span className="text-[#8ab4f8]">.</span></h1>
             <p className="mt-7 max-w-[510px] text-[15px] font-medium leading-[1.8] text-white/85 sm:text-[17px]">A day to explore bold ideas, build together, and find your people in tech.</p>
@@ -60,7 +60,7 @@ export default function Home() {
                 <span className="text-[72px] font-extrabold leading-[0.82] tracking-[-0.09em] text-white lg:text-[82px]">12</span>
                 <span className="pb-1 text-[15px] font-extrabold uppercase leading-tight tracking-[0.08em] text-white">Dec<br /><span className="text-[11px] font-medium tracking-[0.16em] text-white/70">Saturday · 2026</span></span>
               </div>
-              <div className="mt-4 flex items-center justify-between gap-3 text-[12px] font-semibold text-white/90"><span>Bengaluru, India</span><span className="text-white/55">In person ↗</span></div>
+              <div className="mt-4 flex items-center justify-between gap-3 text-[12px] font-semibold text-white/90"><span>Coimbatore, Tamil Nadu</span><span className="text-white/55">In person ↗</span></div>
             </div>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function Home() {
             <p className="mt-7 max-w-[480px] text-[15px] font-medium leading-[1.85] text-[#b9c4d3] sm:text-[17px]">Come curious. Leave inspired, connected, and ready to make something new.</p>
             <div className="mt-10 flex flex-col gap-5 border-t border-white/15 pt-7 text-[13px] font-semibold text-white/90 sm:flex-row sm:gap-9">
               <div><span className="mb-1 block font-mono text-[10px] uppercase tracking-[0.15em] text-[#a7d3ff]">When</span>12 December 2026 · 9 AM – 5 PM</div>
-              <div><span className="mb-1 block font-mono text-[10px] uppercase tracking-[0.15em] text-[#a7d3ff]">Where</span>Bengaluru · Venue to be announced</div>
+              <div><span className="mb-1 block font-mono text-[10px] uppercase tracking-[0.15em] text-[#a7d3ff]">Where</span>Info Institute of Engineering · Coimbatore, Tamil Nadu</div>
             </div>
           </div>
           <RegistrationForm />

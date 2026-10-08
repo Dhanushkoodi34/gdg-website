@@ -6,7 +6,7 @@ import { validateRegistration } from '@/lib/registration'
 
 export const runtime = 'nodejs'
 
-const eventId = 'developer-day-bengaluru-2026'
+const eventId = 'developer-day-info-institute-coimbatore-2026'
 const WINDOW_MS = 60 * 60 * 1000
 const MAX_SUBMISSIONS_PER_WINDOW = 5
 

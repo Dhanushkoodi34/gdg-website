@@ -14,7 +14,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_URL ? `h
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Developer Day 2026 | GDG Community Event Template',
-  description: 'A sample Google Developer Groups community event page. Explore the agenda and register for Developer Day 2026 in Bengaluru.',
+  description: 'A sample Google Developer Groups community event page. Explore the agenda and register for Developer Day 2026 at Info Institute of Engineering, Coimbatore.',
   openGraph: {
     title: 'Developer Day 2026',
     description: 'Build what’s next, together. A community event template for developers.',
